@@ -2,12 +2,19 @@ import React from "react";
 
 import "./menu-item.styles.scss";
 
-export const MenuItem = ({ title, subtitle }) => {
+export const MenuItem = ({ title, imageUrl, size }) => {
     return (
-        <div className="menu-item">
+        // Note that React allows dynamic CSS styling like this.
+        <div className={`${size} menu-item`}>
+            <div
+                className="background-image"
+                style={{
+                    backgroundImage: `url(${imageUrl})`
+                }}
+            />
             <div className="content">
-                <h1 className="title">{ title }</h1>
-                <span className="subtitle">{ subtitle }</span>
+                <h1 className="title">{ title.toUpperCase() }</h1>
+                <span className="subtitle">SHOP NOW</span>
             </div>
         </div>
     )
