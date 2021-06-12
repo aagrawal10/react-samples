@@ -1,0 +1,10 @@
+.sign-in {
+    /* Width is 30% of the view */
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        margin: 10px 0;
+    }
+}
