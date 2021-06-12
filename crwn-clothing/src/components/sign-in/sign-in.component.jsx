@@ -26,6 +26,10 @@ class SignIn extends React.Component {
         this.setState({ [name]: value });
     }
 
+    signinWithGoogle = () => {
+        console.log("Signin with google called");
+    }
+
     render() {
         return (
             <div className="sign-in">
@@ -50,7 +54,10 @@ class SignIn extends React.Component {
                         required
                     />
 
-                    <CustomButton type="submit"> Sign In </CustomButton>
+                    <div className="buttons">
+                        <CustomButton type="submit"> Sign In </CustomButton>
+                        <CustomButton onClick={this.signinWithGoogle} isGoogleSignIn> Sign in with Google </CustomButton>
+                    </div>
                 </form>
             </div>
         )
