@@ -2,3 +2,9 @@ body {
   font-family: 'Open Sans Condensed';
   padding: 20px 60px;
 }
+
+/* This is done, so links don't end up purple and underlined when they're clicked. */
+a {
+  text-decoration: none;
+  color: black;
+}
